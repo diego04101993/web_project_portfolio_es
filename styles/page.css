@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Archivo Black";
+  src:
+    url("../fonts/ArchivoBlack-Regular.woff2") format("woff2"),
+    url("../fonts/ArchivoBlack-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  min-width: 320px;
+  background-color: #050505;
+  color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.page__background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at calc(50% - 240px) 25%,
+      rgba(109, 109, 255, 0.28),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at calc(50% + 240px) 65%,
+      rgba(88, 106, 255, 0.22),
+      transparent 24%
+    ),
+    #050505;
+}
+
+.page__content {
+  position: relative;
+  z-index: 1;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 32px 80px 64px;
+}
+
+.content,
+.header,
+.footer {
+  width: 100%;
+}
+
+.link {
+  color: #ffffff;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.link:hover {
+  color: #6d6dff;
+}
+
+.link_accent {
+  display: inline-block;
+  padding-bottom: 6px;
+  background-image: linear-gradient(90deg, #7c3aed, #6d6dff);
+  background-repeat: no-repeat;
+  background-size: 100% 6px;
+  background-position: left bottom;
+}
+
+.section-title {
+  font-family:
+    "Archivo Black",
+    Arial Black,
+    sans-serif;
+  font-size: 32px;
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 1023px) {
+  .page__content {
+    padding: 24px 32px 56px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page__content {
+    padding: 20px 16px 48px;
+  }
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+}
